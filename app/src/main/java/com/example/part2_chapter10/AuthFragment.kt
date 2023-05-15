@@ -97,6 +97,7 @@ class AuthFragment: Fragment(R.layout.fragment_auth) {
     }
 
     private fun initViewToSignInState() {
+
         binding.emailEditText.setText(Firebase.auth.currentUser?.email)
         binding.emailEditText.isEnabled = false
         binding.passwordEditText.isVisible = false
