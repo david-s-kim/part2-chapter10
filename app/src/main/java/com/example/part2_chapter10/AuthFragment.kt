@@ -104,7 +104,6 @@ class AuthFragment: Fragment(R.layout.fragment_auth) {
         binding.signInOutButton.text = getString(R.string.signOut)
         binding.signUpButton.isEnabled = false
 
-
     }
 
     private fun initViewToSignOutState(){

@@ -17,6 +17,12 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bookMarkArticleFragment"
+            app:destination="@id/bookMarkArticleFragment" />
     </fragment>
 
     <fragment
@@ -39,6 +45,22 @@
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.part2_chapter10.ui.article.ArticleFragment"
+        android:label="글 상세 {articleId}" >
+        <argument
+            android:name="articleId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookMarkArticleFragment"
+        android:name="com.example.part2_chapter10.ui.bookmark.BookMarkArticleFragment"
+        android:label="북마크" >
+        <action
+            android:id="@+id/action_bookMarkArticleFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
     </fragment>
 
 </navigation>
